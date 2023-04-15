@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Edit Account Information</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+ 	  
+    </style>
+  </head>
+  <body>
+    <h1>Edit Account Information</h1>
+    <form action="/rest/account/update" method="post" enctype="multipart/form-data">
+      <div>
+        <label for="profile-type">Profile Type:</label>
+        <select name="profile-type" id="profile-type">
+          <option value="public">Public</option>
+          <option value="private">Private</option>
+        </select>
+      </div>
+      <div>
+        <label for="phone-number">Phone Number:</label>
+        <input type="tel" name="phone-number" id="phone-number">
+      </div>
+      <div>
+        <label for="occupation">Occupation:</label>
+        <input type="text" name="occupation" id="occupation">
+      </div>
+      <div>
+        <label for="job">Job:</label>
+        <input type="text" name="job" id="job">
+      </div>
+      <div>
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location">
+      </div>
+      <div>
+        <label for="photo">Photo:</label>
+        <input type="file" name="photo" id="photo">
+      </div>
+      <div>
+        <label for="role">Role:</label>
+        <select name="role" id="role">
+          <option value="SU">SU</option>
+          <option value="GS">GS</option>
+		  <option value="GA">GA</option>
+          <option value="GBO">GBO</option>
+          <option value="USER" selected>User</option>
+        </select>
+      </div>
+      <div>
+        <input type="submit" value="Save Changes">
+      </div>
+    </form>
+  </body>
+</html>
